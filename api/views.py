@@ -176,7 +176,7 @@ class DataCrudView(APIView):
 
             if operation == "insert":
                 total_documents = new_collection.count_documents({})
-                if total_documents >= 10000:
+                if total_documents >= 10000000000:
                     return Response(
                         {"success": False,
                          "message": f"Sorry, You can add maximum 10,000 documents inside {coll} collection.",
